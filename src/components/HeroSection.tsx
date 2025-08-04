@@ -1,16 +1,25 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import VideoBackground from "./VideoBackground"
+import VideoCanvas from "./VideoCanvas"
+import { useState } from "react"
 
-const HeroSection = () => {
+const HeroSection = ({ onVideoLoaded }: { onVideoLoaded?: () => void }) => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  const handleVideoLoaded = () => {
+    setIsVideoLoaded(true);
+    onVideoLoaded?.();
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <VideoBackground 
-        src="https://framerusercontent.com/assets/x63grw3MJJK8pzlD0qnG8C0qVfs.mp4"
+      <VideoCanvas 
+        videoSrc="https://framerusercontent.com/assets/x63grw3MJJK8pzlD0qnG8C0qVfs.mp4"
         className="absolute inset-0"
+        onVideoLoaded={handleVideoLoaded}
       />
       
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
           <div className="mb-8">
@@ -58,14 +67,13 @@ const HeroSection = () => {
         </div>
 
         {/* Floating Video Element */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
-          <div className="w-80 h-48 rounded-2xl overflow-hidden border border-primary/30 shadow-glow">
-            <VideoBackground 
-              src="https://framerusercontent.com/assets/x63grw3MJJK8pzlD0qnG8C0qVfs.mp4"
-              overlay={false}
+        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block z-30">
+          <div className="w-80 h-48 rounded-2xl overflow-hidden border border-primary/30 shadow-glow bg-gradient-dark">
+            <VideoCanvas 
+              videoSrc="https://framerusercontent.com/assets/x63grw3MJJK8pzlD0qnG8C0qVfs.mp4"
               className="w-full h-full"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center z-40">
               <Button variant="ghost" size="icon" className="w-16 h-16 rounded-full bg-background/20 backdrop-blur-sm hover:bg-background/30">
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z"/>
@@ -77,7 +85,7 @@ const HeroSection = () => {
       </div>
 
       {/* Gradient overlay at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-15" />
     </section>
   );
 };
