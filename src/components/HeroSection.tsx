@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import VideoCanvas from "./VideoCanvas"
 import { useState } from "react"
+import { Rocket, Sparkles } from "lucide-react"
 
 const HeroSection = ({ onVideoLoaded }: { onVideoLoaded?: () => void }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -32,21 +33,22 @@ const HeroSection = ({ onVideoLoaded }: { onVideoLoaded?: () => void }) => {
           {/* Badge */}
           <div className="mb-6 sm:mb-8">
             <Badge className="inline-flex items-center px-3 py-1.5 text-xs sm:text-sm bg-blue-600/20 text-blue-300 border border-blue-500/30 backdrop-blur-sm rounded-full">
+              <Sparkles className="w-3 h-3 mr-1" />
               NEW
-              <span className="ml-2 text-blue-200/80">No. 1 Studio of 2025</span>
+              <span className="ml-2 text-blue-200/80">AI-Powered Automation Platform</span>
             </Badge>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 sm:mb-8 leading-tight text-white">
-            Premium Agency<br />
-            for Creatives.
+            Welcome to<br />
+            <span className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">Jomobit</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100/90 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
-            We specialize in crafting unique digital presence<br className="hidden sm:block" />
-            that help businesses grow and stand out in their industries.
+            Automate Everything on Earth. And Take a trip to Moon<br className="hidden sm:block" />
+            <span className="text-blue-200 font-semibold">The AI-Powered Social Media Content Automation Platform</span>
           </p>
 
           {/* CTA Buttons */}
@@ -55,27 +57,28 @@ const HeroSection = ({ onVideoLoaded }: { onVideoLoaded?: () => void }) => {
               size="lg"
               className="w-full sm:w-auto min-w-[180px] bg-white text-blue-950 hover:bg-blue-50 font-semibold px-6 sm:px-8 py-3 rounded-lg transition-all duration-200"
             >
-              Connect With Us
+              <Rocket className="w-4 h-4 mr-2" />
+              Launch with Jomobit
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="w-full sm:w-auto min-w-[180px] text-white hover:text-blue-950 hover:bg-white font-semibold px-6 sm:px-8 py-3 rounded-lg border-2 border-white/30 hover:border-white transition-all duration-200"
             >
-              What is Landin?
+              Book a Demo
             </Button>
           </div>
 
           {/* Brand Logos */}
           <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-12 opacity-60 px-4">
             <div className="text-blue-200/70 font-semibold text-xs sm:text-sm tracking-wider">
-              LOGO IPSUM
+              AI AUTOMATION
             </div>
             <div className="text-blue-200/70 font-semibold text-xs sm:text-sm tracking-wider">
-              IPSUM
+              SOCIAL MEDIA
             </div>
             <div className="text-blue-200/70 font-semibold text-xs sm:text-sm tracking-wider">
-              LOREM
+              CONTENT CREATION
             </div>
           </div>
         </div>

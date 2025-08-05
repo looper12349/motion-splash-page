@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
+import { Brain, Palette, BarChart3, Calendar, TrendingUp, Zap } from "lucide-react"
 
 const BenefitsSection = () => {
   const benefits = [
-    "Enhanced UX", "Boosted Conversions", "Fast Loading", "SEO Optimized",
-    "Customizable", "Scalable", "Increased Engagement", "Expandable",
-    "Secure", "User-Friendly"
+    "Auto-generates Content", "Trending Topics", "Smart Scheduling", "Real-time Analysis",
+    "Data-backed Strategy", "Cross-platform", "AI-powered", "Autopilot Mode",
+    "Brand Consistency", "Growth Focused"
   ];
 
   return (
@@ -18,12 +19,13 @@ const BenefitsSection = () => {
         {/* Header */}
         <div className="mb-16">
           <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary border-primary/30">
-            • Landin Benefits
+            <Brain className="w-3 h-3 mr-1" />
+            Jomobit Does It All
           </Badge>
           
           <h2 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight">
-            We Just Don't Design, We Build.<br />
-            <span className="text-muted-foreground">If You Can Dream It, We Can Play It!</span>
+            All done by AI.<br />
+            <span className="text-muted-foreground">So you can focus on the bigger picture.</span>
           </h2>
         </div>
 
@@ -43,7 +45,8 @@ const BenefitsSection = () => {
             </Badge>
           ))}
           <Button variant="premium" size="sm" className="ml-4">
-            Contact Now
+            <Zap className="w-3 h-3 mr-1" />
+            Start Automating
           </Button>
         </div>
 
@@ -54,16 +57,14 @@ const BenefitsSection = () => {
             <div className="relative z-10">
               <div className="mb-6">
                 <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M13 3l3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"/>
-                    <path d="M19 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6"/>
-                  </svg>
+                  <Palette className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Submit Unlimited Requests</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">Auto-generates scroll-stopping content</h3>
+                <p className="text-white/80">Posts, carousels, videos & ads</p>
               </div>
               
               <div className="absolute bottom-8 right-8 opacity-60">
-                <div className="text-6xl font-bold text-white/20">Next</div>
+                <div className="text-6xl font-bold text-white/20">AI</div>
               </div>
             </div>
             
@@ -76,27 +77,30 @@ const BenefitsSection = () => {
           <Card className="bg-secondary/10 p-8 border border-border/40 relative overflow-hidden group hover:shadow-glow transition-all duration-500">
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 bg-foreground rounded flex items-center justify-center">
-                  <span className="text-background font-bold text-sm">F</span>
+                <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
+                  <BarChart3 className="w-4 h-4 text-primary-foreground" />
                 </div>
-                <span className="text-foreground font-semibold">Framer</span>
+                <span className="text-foreground font-semibold">Analytics</span>
                 
-                <div className="w-8 h-8 bg-primary rounded flex items-center justify-center ml-4">
-                  <span className="text-primary-foreground font-bold text-sm">A</span>
+                <div className="w-8 h-8 bg-green-500 rounded flex items-center justify-center ml-4">
+                  <TrendingUp className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-foreground font-semibold">App Store</span>
+                <span className="text-foreground font-semibold">Growth</span>
               </div>
               
               <div className="mb-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <h3 className="text-xl font-bold text-foreground">Requests & Revisions</h3>
-                  <Badge className="bg-primary text-primary-foreground">NEW</Badge>
+                  <h3 className="text-xl font-bold text-foreground">Analyzes & Improves</h3>
+                  <Badge className="bg-primary text-primary-foreground">
+                    <Calendar className="w-3 h-3 mr-1" />
+                    Real-time
+                  </Badge>
                 </div>
                 
                 <p className="text-muted-foreground">
-                  Our process includes multiple rounds of requests and<br />
-                  revisions, ensuring that your feedback is incorporated and<br />
-                  your vision is realized.
+                  Analyzes results & sends improvement tips in real-time<br />
+                  while scheduling & publishing across all major platforms<br />
+                  automatically.
                 </p>
               </div>
             </div>

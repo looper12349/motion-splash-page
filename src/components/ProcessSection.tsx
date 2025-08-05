@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
+import { Users, Building, Zap } from "lucide-react"
 
 const ProcessSection = () => {
   return (
@@ -11,52 +12,51 @@ const ProcessSection = () => {
           <div className="space-y-8">
             <div>
               <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary border-primary/30">
-                • How We Work?
+                <Building className="w-3 h-3 mr-1" />
+                Built For
               </Badge>
               
               <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                We Simplify The Journey<br />
-                <span className="text-muted-foreground">From Design To Launch.</span>
+                From Planning to Publishing<br />
+                <span className="text-muted-foreground">Jomobit Does It All</span>
               </h2>
               
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                We make it easy to bring your ideas to life, guiding you from<br />
-                concept to a fully launched product.
+                Your brand deserves more than chaos and content calendars.<br />
+                With Jomobit, you're always on-brand, on-trend, and on-time.
               </p>
             </div>
 
             {/* Process Card */}
             <Card className="bg-gradient-dark border-border/40 p-8">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
+              <div className="space-y-6">
+                <div className="flex items-start gap-6 pb-4 border-b border-border/20">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+                    <Users className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">Startups & SMEs</h3>
+                    <p className="text-muted-foreground text-sm">Looking to grow fast with fewer resources and needing consistent brand visibility.</p>
                   </div>
                 </div>
                 
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-4">
-                    <h3 className="text-xl font-semibold text-foreground">Kickoff</h3>
-                    <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30">
-                      Stage 1
-                    </Badge>
+                <div className="flex items-start gap-6 pb-4 border-b border-border/20">
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-primary" />
                   </div>
-                  
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    The kickoff stage is where everything begins. We align with you to<br />
-                    understand your goals, vision, and expectations. Through in-depth<br />
-                    discussions and thorough research.
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-3">
-                    <Badge variant="outline" className="border-border/40 text-muted-foreground">
-                      Comprehensive Consultation
-                    </Badge>
-                    <Badge variant="outline" className="border-border/40 text-muted-foreground">
-                      Project Roadmap
-                    </Badge>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">Creators & Influencers</h3>
+                    <p className="text-muted-foreground text-sm">Who want to stay relevant daily with automated content creation.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-6">
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <Building className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">Enterprises</h3>
+                    <p className="text-muted-foreground text-sm">Scaling content across multiple teams and regions efficiently.</p>
                   </div>
                 </div>
               </div>
